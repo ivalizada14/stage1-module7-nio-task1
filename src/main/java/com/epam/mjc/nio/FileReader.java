@@ -15,7 +15,7 @@ public class FileReader {
         {
             String line = null;
             while((line= bufferedReader.readLine())!=null)
-                bld.append(line);
+                bld.append(line + "\n");
         }catch (IOException ioException)
         {
             logger.log(Level.INFO, ioException.toString());
@@ -26,4 +26,5 @@ public class FileReader {
 
         return new Profile(parts[1], Integer.parseInt(parts[3]), parts[5], Long.parseLong(parts[7]) );
     }
+
 }
